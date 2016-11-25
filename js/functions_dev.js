@@ -92,6 +92,11 @@ function startHeartAnimation() {
 	};
 })(jQuery);
 
+function getDaysInMonth(month) {
+	var data = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	return data[month];
+}
+
 function timeElapse(date){
 	var current = Date();
 	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
